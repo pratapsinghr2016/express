@@ -1,0 +1,1725 @@
+:root {
+	--primary-main: #000;
+	--dark-blue: #005eff;
+	--blue-invert: #ffffff;
+	--white: #ffffff;
+	--conversations-primary: #5767f8;
+	--conversations-primary-light: #0083ff;
+	--conversations-secondary: #7a87fd;
+	--conversations-primary-tint-1: #e4e7fd;
+	--conversations-primary-tint-2: #e5e6fc;
+	--conversations-primary-tint-3: #f1f1fd;
+	--conversation-light-message-bg: #f4f4f4;
+	--conversation-light-message-secondary-bg: #f4f7fb;
+	--conversation-light-message-secondary-text: #333;
+	--conversation-light-message-text: #222;
+	--conversation-dark-message-bg: #dce1f9;
+	--conversation-dark-message-secondary-bg: #cdd3eb;
+	--conversation-dark-message-text: #20284c;
+	--conversation-light-email-bg: #dbd5ef;
+	--conversation-light-email-secondary-bg: #f5f3ff;
+	--conversation-dark-email-bg: #e9e2ff;
+	--conversation-light-sms-bg: #e5ffdf;
+	--conversation-light-sms-secondary-bg: #eefceb;
+	--conversation-dark-sms-bg: #e5ffdf;
+	--conversation-light-note-bg: #fff3c7;
+	--conversation-light-note-secondary-bg: #faf3d7;
+	--conversation-dark-note-bg: #fdf2cd;
+  }
+  html {
+	overflow: hidden;
+  }
+  html, body {
+	border: 0;
+	max-width: 100%;
+	width: auto;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+  }
+  #root {
+	overflow: hidden;
+  }
+  body {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #000000;
+	background-color: var(--white);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	cursor: default;
+  }
+  *:not(.fa):not(.WysiwygEditor *):not(.ace_editor *):not(.LSOIVDOLabel):not(.LSOIVDropdownOption p):not(.LSOIAFItem.customFont p):not(.LSOIVDropdownOption p.LSOIVDOLabel):not(.FormPresenterDialog):not(.FormPresenterDialog *), body {
+	font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  *, ::after, ::before {
+	box-sizing: border-box;
+  }
+  .cm-scroller {
+	cursor: text;
+	font-size: 1rem;
+  }
+  img {
+	max-width: 100%;
+  }
+  p {
+	cursor: default;
+  }
+  button p {
+	cursor: pointer;
+  }
+  @media screen and (min-width: 551px) {
+	.LeftMainMenu + .DashclicksAppBody {
+	  margin-left: 65px !important;
+	}
+  }
+  .DashclicksAppBody {
+	display: flex;
+	flex-direction: column;
+	-ms-flex: 1;
+	flex: 1;
+	overflow-y: auto;
+  }
+  table.DCTable {
+	overflow-x: hidden !important;
+  }
+  /* These are the default badge styles */
+  .Canny_BadgeContainer .Canny_Badge {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	border-radius: 10px;
+	background-color: transparent;
+	padding: 5px;
+	border: 1px solid transparent;
+  }
+  .pageWrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: auto;
+	position: relative;
+  }
+  svg {
+	width: 1em;
+	height: 1em;
+	display: block;
+	font-size: inherit;
+	transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	flex-shrink: 0;
+	user-select: none;
+	fill: currentColor;
+  }
+  svg.highcharts-root {
+	width: 100%;
+	height: 100%;
+  }
+  a {
+	text-decoration: none;
+  }
+  /* Scroll Bar */
+  * {
+	scrollbar-width: thin;
+	scrollbar-color: #00000033 #00000018;
+  }
+  *::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	border-radius: 50px;
+	transition: all ease 0.2s;
+	overflow: auto;
+	margin: auto;
+  }
+  *::-webkit-scrollbar-track {
+	border-radius: 50px;
+	overflow: auto;
+	overflow-y: scroll;
+	overflow-x: scroll;
+  }
+  *::-webkit-scrollbar-thumb {
+	background: #0000;
+	border-radius: 50px;
+  }
+  *:hover::-webkit-scrollbar-thumb {
+	background: #00000033;
+	transition-duration: 10s;
+  }
+  .HeaderBar {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
+  }
+  .HeaderBar h1.HeaderBarTitle {
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--blue-invert);
+	opacity: 0.8;
+	flex: 1;
+	margin: 0;
+  }
+  .HeaderBar .HeaderBarIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 0.6rem;
+	height: 100%;
+  }
+  .HeaderBar .HeaderBarIcon svg {
+	fill: var(--blue-invert);
+	width: 1rem;
+	height: 1rem;
+  }
+  .HeaderBar .HeaderBarClose {
+	display: flex;
+  }
+  .HeaderBar .HeaderBarClose .iconButton {
+	border-radius: 100%;
+	background-color: #26262b;
+	border-color: transparent;
+	color: var(--white);
+  }
+  .HeaderBar .HeaderBarClose .iconButton:hover {
+	background-color: #fbfbfb0a;
+  }
+  .HeaderBar .HeaderBarDC {
+	display: flex;
+  }
+  .HeaderBar .HeaderBarDC .iconButton {
+	border-radius: 100%;
+	background-color: #26262b;
+	border-color: transparent;
+	color: var(--white);
+	margin: 0 4px;
+  }
+  .HeaderBar .HeaderBarDC .iconButton:hover {
+	background-color: #fbfbfb0a;
+  }
+  .BodyBox {
+	padding: 15px 15px 15px 15px;
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+  }
+  .BodyBox .BodyBoxInner {
+	height: 100%;
+  }
+  .ButtonWrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  .ButtonWrapper.endBtns {
+	justify-content: flex-end;
+  }
+  .ButtonWrapper.endBtns button {
+	margin-left: 15px;
+  }
+  .ButtonWrapper .BWSap {
+	flex: 1;
+  }
+  .ButtonWrapper .BWSap button {
+	margin-right: 10px;
+  }
+  .ButtonWrapper .BWSap button:last-child {
+	margin-right: 0px;
+  }
+  .DCDropdownSelect {
+	display: inline-flex;
+  }
+  .DCDropdownSelect.fullWidth {
+	display: flex;
+	width: 100%;
+  }
+  .DCDropdownSelect.fullWidth button.DCDSMainBtn {
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+	padding: 10px;
+	background-color: transparent;
+	position: relative;
+	padding-right: 35px;
+	cursor: pointer;
+	min-height: 38px;
+  }
+  .DCDropdownSelect.fullWidth button.DCDSMainBtn::after {
+	content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 512 512' ><path d='M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0    s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667    C514.096,145.416,514.096,131.933,505.755,123.592z' fill='rgb(132 146 158)'></path></svg>");
+	position: absolute;
+	right: 10px;
+	top: 11px;
+	transition: all ease 0.1s;
+	width: 15px;
+	height: 15px;
+	z-index: 1;
+  }
+  .DCDropdownSelect.fullWidth button.DCDSMainBtn.disabled::after {
+	display: none;
+  }
+  .DCDropdownSelect.fullWidth button.DCDSMainBtn.focus {
+	border-color: var(--dark-blue);
+	box-shadow: 0 0 3px var(--dark-blue);
+  }
+  .DCDropdownSelect.fullWidth button.DCDSMainBtn.focus::after {
+	transform: rotate(180deg);
+  }
+  .DCDropdownSelect .DCDSMainBtn.mainButton span.buttonTitle {
+	text-align: left;
+  }
+  .DCDSOptionList .DropdownOptionsBtn.mainButton {
+	justify-content: flex-start;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 0;
+  }
+  .DCDSOptionList .DropdownOptionsBtn.mainButton.active {
+	background-color: #f2f2f2;
+  }
+  .DCDSOptionList .DropdownOptionsBtn.mainButton span.buttonTitle {
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+  .DCDSOptionList .DropdownOptionsBtn .DCDSNoOption {
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	color: #000;
+  }
+  .DCDSOptionList .DropdownOptionGroup {
+	display: flex;
+	flex-direction: column;
+  }
+  .DCDSOptionList .DropdownOptionGroup .DOGTitle {
+	font-size: 14px;
+	font-weight: 600;
+	color: #000;
+	text-transform: capitalize;
+	padding: 10px;
+  }
+  .DCDSOptionList .DropdownOptionGroup .DOGOption {
+	display: flex;
+	flex-direction: column;
+  }
+  .DCDSOptionList .DropdownOptionGroup .DOGOption .DOGOptionBtn {
+	justify-content: flex-start;
+	padding: 10px;
+	padding-left: 30px;
+	border: 0;
+  }
+  .DCDropdownSelect.fullWidth .AutoCompleteRoot {
+	width: 100%;
+  }
+  .primary {
+	color: var(--dark-blue) !important;
+  }
+  .danger {
+	color: #f44336 !important;
+  }
+  .subMenuBar {
+	min-height: 65px;
+	border-bottom: 1px solid #eaeaea;
+	display: flex;
+	flex-direction: column;
+  }
+  .subMenuBar .sMBInner {
+	display: flex;
+	height: 100%;
+	height: unset;
+	flex: 1;
+  }
+  .subMenuBar .sMBInner .sMBILeft {
+	width: 270px;
+	border-right: 1px solid #eaeaea;
+	background-color: var(--white);
+  }
+  .subMenuBar .sMBInner .sMBILeft .sMBILPageHeading {
+	display: flex;
+	align-items: center;
+	padding: 0px 15px;
+	height: 100%;
+	column-gap: 10px;
+  }
+  .subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	width: 25px;
+	height: 25px;
+  }
+  .subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	margin: 0;
+	flex: 1 1;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 25px;
+  }
+  .subMenuBar .sMBInner .sMBIRight {
+	width: calc(100% - 270px);
+	display: flex;
+  }
+  .subMenuBar .sMBInner .sMBIRight.sMBIRAffilateCenter {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background: #fff;
+  }
+  .subMenuBar .sMBInner .sMBIRight.sMBIRAffilateCenter .sMBIRSInner {
+	margin-right: 15px;
+  }
+  .sMBIRSettings .sMBIRSInner {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	column-gap: 15px;
+	margin-right: 15px;
+  }
+  .sMBIRSettings .sMBIRSText {
+	font-size: 14px;
+	font-weight: 600;
+	color: #000;
+  }
+  .UserInfoHead {
+	padding: 15px;
+  }
+  .UserInfoHead .UserInfoHeadInner {
+	display: flex;
+	align-items: center;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn {
+	display: flex;
+	flex: 1;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIB12 {
+	display: flex;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn1 {
+	display: flex;
+	padding-right: 15px;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn2 {
+	display: flex;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn .mainButton {
+	border-radius: 50px;
+	background-color: var(--dark-blue);
+	color: var(--white);
+	padding: 8px 15px;
+	border-color: var(--dark-blue);
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn1 .mainButton {
+	border-radius: 50px;
+	padding: 8px 15px;
+	color: #26262b;
+	box-shadow: 0 0 15px #f2f2f2;
+  }
+  .UserInfoHead .UserInfoHeadInner .UIHIBtn2 .mainButton {
+	border-radius: 50px;
+	padding: 8px 15px;
+	color: #26262b;
+	box-shadow: 0 0 15px #f2f2f2;
+  }
+  .SidebarComWrapper {
+	padding: 15px;
+  }
+  .SidebarComWrapper.rlNoPadding {
+	padding: 15px 0px;
+  }
+  .SidebarComWrapper.tbNoPadding {
+	padding: 0px 15px;
+  }
+  .SidebarComWrapper.topNoPadding {
+	padding-top: 0;
+  }
+  .SidebarComWrapper .SbCWAddBtn {
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+  }
+  .SidebarComWrapper label.radioButton {
+	padding: 3px 0;
+  }
+  .SbCWAddBtn button.mainButton {
+	padding: 10px 23px;
+	border-radius: 0;
+	font-size: 16px;
+  }
+  .SbCWAddBtn button.mainButton span.buttonTitle {
+	padding-left: 7px;
+  }
+  .ErrorBoundary {
+	flex: 1;
+  }
+  .ErrorBoundary .EBInner {
+	height: 100%;
+	position: relative;
+	background-color: #d4d9ed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+  }
+  .ErrorBoundary .EBInner .EBIContent {
+	text-align: center;
+	max-width: 750px;
+	width: 100%;
+  }
+  .ErrorBoundary .EBInner .EBIContent .EBICDes {
+	font-size: 30px;
+	font-weight: 300;
+	color: var(--dark-blue);
+  }
+  .ErrorBoundary .EBInner .EBIContent .EBICDes strong {
+	text-decoration: underline;
+	text-transform: capitalize;
+	font-weight: 600;
+	cursor: pointer;
+  }
+  .ErrorBoundary .EBInner .EBICTir1 {
+	position: absolute;
+	width: 300px;
+	height: 120%;
+	top: 25px;
+	right: -340px;
+	background-color: #8a65df;
+	box-shadow: 0px 0px 60px 20px rgba(137, 100, 222, 0.5);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	transform: rotate(20deg);
+	right: -170px;
+	animation-name: animation_error_1;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+  }
+  .ErrorBoundary .EBInner .EBICTir2 {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	right: -10%;
+	bottom: -301px;
+	background-color: #8b65e4;
+	box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5), 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	z-index: 5;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	animation-name: animation_error_2;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	transform: rotate(-20deg);
+  }
+  .ErrorBoundary .EBInner .EBICTir3 {
+	position: absolute;
+	width: 300px;
+	height: 120%;
+	bottom: 25px;
+	background-color: #8a65df;
+	box-shadow: 0px 0px 60px 20px rgba(137, 100, 222, 0.5);
+	transition: all 0.5s;
+	transform: rotate(-20deg);
+	left: -170px;
+	animation-name: animation_error_1;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+  }
+  .ErrorBoundary .EBInner .EBICTir4 {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	left: -10%;
+	top: -301px;
+	background-color: #8b65e4;
+	box-shadow: 0px 0px 60px 10px rgba(131, 95, 214, 0.5), 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	z-index: 5;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	animation-name: animation_error_2;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	transform: rotate(-20deg);
+  }
+  @-webkit-keyframes animation_error_1 {
+	from {
+	  -webkit-transform: rotate(20deg);
+	  transform: rotate(20deg);
+	}
+	to {
+	  -webkit-transform: rotate(25deg);
+	  transform: rotate(25deg);
+	}
+  }
+  @-o-keyframes animation_error_1 {
+	from {
+	  -webkit-transform: rotate(20deg);
+	  transform: rotate(20deg);
+	}
+	to {
+	  -webkit-transform: rotate(25deg);
+	  transform: rotate(25deg);
+	}
+  }
+  @-moz-keyframes animation_error_1 {
+	from {
+	  -webkit-transform: rotate(20deg);
+	  transform: rotate(20deg);
+	}
+	to {
+	  -webkit-transform: rotate(25deg);
+	  transform: rotate(25deg);
+	}
+  }
+  @keyframes animation_error_1 {
+	from {
+	  -webkit-transform: rotate(20deg);
+	  transform: rotate(20deg);
+	}
+	to {
+	  -webkit-transform: rotate(25deg);
+	  transform: rotate(25deg);
+	}
+  }
+  body .pageWrapper {
+	transition: all 0.1s cubic-bezier(0.98, 0.28, 0.56, 0.59);
+  }
+  body.activeBlur .pageWrapper {
+	filter: blur(3px);
+	overflow: hidden;
+  }
+  .DataFieldPreview {
+	padding: 10px;
+	background-color: #f6f8fc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	border: 1px solid #ebecee;
+	box-shadow: 0 0 4px 0px #dddddd54;
+	cursor: not-allowed;
+  }
+  .DataFieldPreview .DFPTitle {
+	font-size: 14px;
+	font-weight: 400;
+	color: #000;
+	word-break: break-all;
+  }
+  p {
+	margin: 0;
+  }
+  .TemplateViewContainer {
+	height: 100%;
+	background-color: var(--white);
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+	position: relative;
+  }
+  .TemplateViewContainerRow {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 50px 30px;
+	padding-bottom: 25px;
+	height: 100%;
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+  }
+  .TemplateViewContainerRow.AgencyWebsites {
+	height: 725px !important;
+  }
+  .TVCREmpty {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+  }
+  .TVCREmpty .TVCREContent {
+	display: block;
+  }
+  .TVCREmpty .TVCREContent .TVCREIcon {
+	display: flex;
+	justify-content: center;
+	font-size: 200px;
+  }
+  .TVCREmpty .TVCREContent .TVCRETitle {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+  }
+  .TVCREmpty .TVCREContent .TVCRESTitle {
+	font-size: 16px;
+	font-weight: 500;
+	color: #00000099;
+	padding-top: 5px;
+	text-align: center;
+  }
+  .TVCREmpty .TVCREContent .TVCREBtn {
+	display: flex;
+	justify-content: center;
+	padding-top: 15px;
+  }
+  .pageContentSidebar {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+  }
+  .pageContentSidebar .PCSView {
+	width: calc(100% - 490px);
+	display: flex;
+	flex-direction: column;
+	box-shadow: unset;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+  }
+  .pageContentSidebar .PCSSidebar {
+	width: 490px;
+	padding-left: 15px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+  }
+  .pageContentSidebar .PCSSidebar .PCSSInner {
+	flex: 1;
+	overflow: auto;
+	overflow-y: overlay;
+	overflow-x: overlay;
+	display: flex;
+	flex-direction: column;
+  }
+  .ArrowPopover .PopoverMainInner {
+	margin-left: 1.2rem;
+  }
+  @media screen and (max-width: 550px) {
+	.ArrowPopover .PopoverMainInner {
+	  margin-top: 15px;
+	  margin-left: 0;
+	}
+  }
+  .ArrowPopover .PopoverMainInner::before {
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background-color: var(--white);
+	box-shadow: 0 4px 14px 0 #00000033, 0 0 0 1px #0000000d;
+	border-radius: 4px;
+	transform: rotate(45deg);
+	visibility: hidden;
+  }
+  @media screen and (min-width: 550px) {
+	.ArrowPopover .PopoverMainInner::before {
+	  top: unset !important;
+	  left: -6px !important;
+	  bottom: 0.7rem !important;
+	  background-color: #f44336 !important;
+	}
+  }
+  .CheckboxWithEdit {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-bottom: 3px;
+  }
+  .CheckboxWithEdit label.Checkbox::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+  }
+  .CheckboxWithEdit .TitleNumber {
+	flex: 1;
+  }
+  .CheckboxWithEdit .TNTitleMain {
+	flex: 1;
+  }
+  .CheckboxWithEdit label.Checkbox {
+	position: unset;
+	margin-bottom: 0;
+  }
+  .CheckboxWithEdit .TitleNumber .TNTitle .TNTBtns {
+	opacity: 0;
+	z-index: 9;
+  }
+  .CheckboxWithEdit:hover .TitleNumber .TNTitle .TNTBtns {
+	opacity: 1;
+  }
+  .CheckboxWithEdit:hover .TNTitleMain button.iconButton.danger {
+	opacity: 1;
+  }
+  .CheckboxWithEdit:hover .TitleNumber {
+	background-color: #f4f4f6;
+  }
+  .CheckboxWithEdit .TitleNumber.active {
+	z-index: 9;
+	background-color: #f4f4f6;
+  }
+  .PopoverMain.HeaderTooltip.bottom-center .PopoverMainInner::before {
+	visibility: visible;
+	top: -6px;
+	left: calc(50% - 6px);
+  }
+  .PopoverMain.HeaderTooltip.left-center .PopoverMainInner::before {
+	visibility: visible;
+  }
+  .inputBtnOuter {
+	display: flex;
+	align-items: flex-start;
+  }
+  .inputBtnOuter > *:first-child {
+	flex: 1;
+  }
+  .inputBtnOuter .ToolTipWrapper {
+	display: flex;
+	padding-left: 10px;
+  }
+  .inputBtnOuter button {
+	margin-left: 10px;
+  }
+  .inputBtnOuter .ToolTipWrapper button.iconButton, .inputBtnOuter button.iconButton {
+	padding: 10px 12px;
+  }
+  @media (min-width: 1561px) and (max-width: 1800px) {
+	.subMenuBar {
+	  min-height: 60px;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 250px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 500;
+	  line-height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: calc(100% - 250px);
+	}
+	.TemplateViewContainerRow {
+	  padding: 30px 30px;
+	}
+	.HeaderBar h1.HeaderBarTitle {
+	  font-size: 20px;
+	}
+	.pageContentSidebar .PCSView {
+	  width: calc(100% - 430px);
+	}
+	.pageContentSidebar .PCSSidebar {
+	  width: 430px;
+	}
+  }
+  @media (min-width: 1367px) and (max-width: 1560px) {
+	.subMenuBar {
+	  min-height: 55px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 500;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 250px;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: calc(100% - 250px);
+	}
+	.HeaderBar h1.HeaderBarTitle {
+	  font-size: 20px;
+	}
+	.pageContentSidebar .PCSView {
+	  width: calc(100% - 400px);
+	}
+	.pageContentSidebar .PCSSidebar {
+	  width: 400px;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (min-width: 1281px) and (max-width: 1366px) {
+	.subMenuBar {
+	  min-height: 50px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 14px;
+	  font-weight: 500;
+	  line-height: normal;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 250px;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: calc(100% - 250px);
+	}
+	.HeaderBar h1.HeaderBarTitle {
+	  font-size: 16px;
+	}
+	.pageContentSidebar .PCSView {
+	  width: calc(100% - 300px);
+	}
+	.pageContentSidebar .PCSSidebar {
+	  width: 300px;
+	}
+	.HeaderBar .HeaderBarClose .iconButton {
+	  font-size: 13px;
+	  padding: 5px;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (min-width: 1024px) and (max-width: 1280px) {
+	.subMenuBar {
+	  min-height: 50px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: normal;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 200px;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: calc(100% - 200px);
+	}
+	.pageContentSidebar .PCSView {
+	  width: calc(100% - 300px);
+	}
+	.pageContentSidebar .PCSSidebar {
+	  width: 300px;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (min-width: 992px) and (max-width: 1023.98px) {
+	.subMenuBar {
+	  min-height: 50px;
+	  background-color: #f6f8fc;
+	  border-bottom: 0;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: normal;
+	}
+	.subMenuBar .sMBInner {
+	  position: relative;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 230px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  height: 50px;
+	  z-index: 1;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: 100%;
+	  flex-wrap: wrap;
+	}
+	.sMBIRSettings .sMBIRSInner {
+	  flex: 1;
+	  justify-content: flex-end;
+	}
+	.TemplateViewContainerRow {
+	  padding: 30px 30px;
+	}
+	.pageContentSidebar .PCSSidebar {
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  background-color: var(--white);
+	  z-index: 2;
+	  width: 400px;
+	  border-top: 1px solid #eaeaea;
+	  border-left: 1px solid #eaeaea;
+	  padding: 0;
+	  transform: translateX(100%);
+	  transition: all ease 0.3s;
+	}
+	.pageContentSidebar .PCSSidebar.activityResponsiveView {
+	  position: absolute;
+	  transform: translateX(0);
+	}
+	.pageContentSidebar .PCSView {
+	  width: 100%;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+	.subMenuBar {
+	  min-height: 50px;
+	  background-color: #f6f8fc;
+	  border-bottom: 0;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: normal;
+	}
+	.subMenuBar .sMBInner {
+	  position: relative;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 230px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  height: 50px;
+	  z-index: 1;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: 100%;
+	  flex-wrap: wrap;
+	}
+	.sMBIRSettings .sMBIRSInner {
+	  flex: 1;
+	  justify-content: flex-end;
+	}
+	.TemplateViewContainerRow {
+	  padding: 30px 30px;
+	}
+	.pageContentSidebar .PCSSidebar {
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  background-color: var(--white);
+	  z-index: 2;
+	  width: 400px;
+	  border-top: 1px solid #eaeaea;
+	  border-left: 1px solid #eaeaea;
+	  padding: 0;
+	  transform: translateX(100%);
+	  transition: all ease 0.3s;
+	}
+	.pageContentSidebar .PCSSidebar.activityResponsiveView {
+	  position: absolute;
+	  transform: translateX(0);
+	}
+	.pageContentSidebar .PCSView {
+	  width: 100%;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+	.subMenuBar {
+	  min-height: 50px;
+	  background-color: #f6f8fc;
+	  border-bottom: 0;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: normal;
+	}
+	.subMenuBar .sMBInner {
+	  position: relative;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 200px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  height: 50px;
+	  z-index: 1;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: 100%;
+	  flex-wrap: wrap;
+	}
+	.sMBIRSettings .sMBIRSInner {
+	  flex: 1;
+	  justify-content: flex-end;
+	}
+	.pageContentSidebar .PCSSidebar {
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  background-color: var(--white);
+	  z-index: 2;
+	  width: 300px;
+	  border-top: 1px solid #eaeaea;
+	  border-left: 1px solid #eaeaea;
+	  padding: 0;
+	  transform: translateX(100%);
+	  transition: all ease 0.3s;
+	}
+	.pageContentSidebar .PCSSidebar.activityResponsiveView {
+	  position: absolute;
+	  transform: translateX(0);
+	}
+	.pageContentSidebar .PCSView {
+	  width: 100%;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+  }
+  @media (max-width: 575.98px) {
+	.subMenuBar {
+	  min-height: 50px;
+	  background-color: #f6f8fc;
+	  border-bottom: 0;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading {
+	  grid-column-gap: 5px;
+	  column-gap: 5px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading svg {
+	  width: 20px;
+	  height: 20px;
+	}
+	.subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: normal;
+	}
+	@supports (-webkit-touch-callout: none) {
+	  /* CSS specific to iOS devices */
+	  .subMenuBar .sMBInner .sMBILeft .sMBILPageHeading h1.sMBILPHTitle {
+		padding-left: 10px;
+	  }
+	}
+	.subMenuBar .sMBInner {
+	  position: relative;
+	}
+	.subMenuBar .sMBInner .sMBILeft {
+	  width: 150px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  height: 50px;
+	  z-index: 1;
+	  border-bottom: 1px solid #eaeaea;
+	}
+	.subMenuBar .sMBInner .sMBIRight {
+	  width: 100%;
+	  flex-wrap: wrap;
+	  position: relative;
+	}
+	.sMBIRSettings .sMBIRSInner {
+	  flex: 1;
+	  justify-content: flex-end;
+	  column-gap: 10px;
+	}
+	@supports (-webkit-touch-callout: none) {
+	  /* CSS specific to iOS devices */
+	  .sMBIRSettings .sMBIRSInner .iconButton {
+		margin-left: 10px;
+	  }
+	  .sMBIRSettings .sMBIRSInner .iconButton:first-child {
+		margin-left: 0px;
+	  }
+	}
+	.TemplateViewContainerRow {
+	  padding: 25px 15px;
+	}
+	.pageContentSidebar .PCSSidebar {
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  background-color: var(--white);
+	  z-index: 2;
+	  width: 100%;
+	  border-top: 1px solid #eaeaea;
+	  border-left: 1px solid #eaeaea;
+	  padding: 0;
+	  transform: translateX(100%);
+	  transition: all ease 0.3s;
+	}
+	.pageContentSidebar .PCSSidebar.activityResponsiveView {
+	  position: absolute;
+	  transform: translateX(0);
+	}
+	.pageContentSidebar .PCSView {
+	  width: 100%;
+	}
+	.HeaderBar h1.HeaderBarTitle {
+	  font-size: 18px;
+	  font-weight: 600;
+	}
+	.ErrorBoundary .EBInner .EBICTir1 {
+	  width: 150px;
+	  height: 100%;
+	}
+	.ErrorBoundary .EBInner .EBICTir2 {
+	  width: 100%;
+	  height: 350px;
+	  right: -30%;
+	  bottom: -310px;
+	}
+	.ErrorBoundary .EBInner .EBICTir3 {
+	  width: 150px;
+	  height: 100%;
+	}
+	.ErrorBoundary .EBInner .EBICTir4 {
+	  position: absolute;
+	  width: 100%;
+	  height: 300px;
+	  left: -10%;
+	  top: -301px;
+	}
+	.UserInfoHead .UserInfoHeadInner {
+	  align-items: flex-start;
+	}
+	.UserInfoHead .UserInfoHeadInner .UIHIB12 {
+	  flex-direction: column;
+	  align-items: flex-end;
+	}
+	.UserInfoHead .UserInfoHeadInner .UIHIBtn1 {
+	  padding-right: 0;
+	  padding-bottom: 10px;
+	}
+  }
+  iframe#launcher {
+	display: none;
+  }
+  .message {
+	position: absolute;
+	font-size: 12px;
+	font-weight: 700;
+	top: -35px;
+	display: inline-block;
+	color: #0e56ab;
+	border: 1px solid #728fe4;
+	background: #ddd;
+	box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+	vertical-align: middle;
+	max-width: 700px;
+	padding: 5px;
+	clear: both;
+	overflow: hidden;
+	white-space: nowrap;
+  }
+  .style_innerBox__tHjGD {
+	background-color: #728fe4;
+	z-index: 100000000;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  .style_innerBox__29N0Y {
+	background-color: #728fe4;
+	z-index: 100000000;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	cursor: pointer;
+  }
+  .demoImg {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	margin: 20px 5px;
+  }
+  .move {
+	cursor: move;
+	user-select: none;
+  }
+  .w-100 {
+	width: 100% !important;
+  }
+  .w-auto {
+	width: auto !important;
+  }
+  .h-100 {
+	height: 100% !important;
+  }
+  .no-border {
+	border: none !important;
+  }
+  .d-none {
+	display: none !important;
+  }
+  .d-flex {
+	display: -ms-flexbox !important;
+	display: flex !important;
+  }
+  .d-inline-flex {
+	display: -ms-inline-flexbox !important;
+	display: inline-flex !important;
+  }
+  .flex-center {
+	display: flex !important;
+	-ms-flex-pack: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+  }
+  .flex-row {
+	-ms-flex-direction: row !important;
+	flex-direction: row !important;
+  }
+  .flex-column {
+	display: -ms-flexbox !important;
+	display: flex !important;
+	-ms-flex-direction: column !important;
+	flex-direction: column !important;
+  }
+  .flex-row-reverse {
+	-ms-flex-direction: row-reverse !important;
+	flex-direction: row-reverse !important;
+  }
+  .flex-column-reverse {
+	-ms-flex-direction: column-reverse !important;
+	flex-direction: column-reverse !important;
+  }
+  .flex-wrap {
+	-ms-flex-wrap: wrap !important;
+	flex-wrap: wrap !important;
+  }
+  .flex-nowrap {
+	-ms-flex-wrap: nowrap !important;
+	flex-wrap: nowrap !important;
+  }
+  .flex-wrap-reverse {
+	-ms-flex-wrap: wrap-reverse !important;
+	flex-wrap: wrap-reverse !important;
+  }
+  .flex-1 {
+	-ms-flex: 1 !important;
+	flex: 1 !important;
+  }
+  .flex-fill {
+	-ms-flex: 1 1 auto !important;
+	flex: 1 1 auto !important;
+  }
+  .flex-grow-0 {
+	-ms-flex-positive: 0 !important;
+	flex-grow: 0 !important;
+  }
+  .flex-grow-1 {
+	-ms-flex-positive: 1 !important;
+	flex-grow: 1 !important;
+  }
+  .flex-shrink-0 {
+	-ms-flex-negative: 0 !important;
+	flex-shrink: 0 !important;
+  }
+  .flex-shrink-1 {
+	-ms-flex-negative: 1 !important;
+	flex-shrink: 1 !important;
+  }
+  .justify-content-start {
+	-ms-flex-pack: start !important;
+	justify-content: flex-start !important;
+  }
+  .justify-content-end {
+	-ms-flex-pack: end !important;
+	justify-content: flex-end !important;
+  }
+  .justify-content-center {
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+  }
+  .justify-content-between {
+	-ms-flex-pack: justify !important;
+	justify-content: space-between !important;
+  }
+  .justify-content-around {
+	-ms-flex-pack: distribute !important;
+	justify-content: space-around !important;
+  }
+  .align-items-start {
+	-ms-flex-align: start !important;
+	align-items: flex-start !important;
+  }
+  .align-items-end {
+	-ms-flex-align: end !important;
+	align-items: flex-end !important;
+  }
+  .align-items-center {
+	-ms-flex-align: center !important;
+	align-items: center !important;
+  }
+  .align-items-baseline {
+	-ms-flex-align: baseline !important;
+	align-items: baseline !important;
+  }
+  .align-items-stretch {
+	-ms-flex-align: stretch !important;
+	align-items: stretch !important;
+  }
+  .align-content-start {
+	-ms-flex-line-pack: start !important;
+	align-content: flex-start !important;
+  }
+  .align-content-end {
+	-ms-flex-line-pack: end !important;
+	align-content: flex-end !important;
+  }
+  .align-content-center {
+	-ms-flex-line-pack: center !important;
+	align-content: center !important;
+  }
+  .align-content-between {
+	-ms-flex-line-pack: justify !important;
+	align-content: space-between !important;
+  }
+  .align-content-around {
+	-ms-flex-line-pack: distribute !important;
+	align-content: space-around !important;
+  }
+  .align-content-stretch {
+	-ms-flex-line-pack: stretch !important;
+	align-content: stretch !important;
+  }
+  .align-self-auto {
+	-ms-flex-item-align: auto !important;
+	align-self: auto !important;
+  }
+  .align-self-start {
+	-ms-flex-item-align: start !important;
+	align-self: flex-start !important;
+  }
+  .align-self-end {
+	-ms-flex-item-align: end !important;
+	align-self: flex-end !important;
+  }
+  .align-self-center {
+	-ms-flex-item-align: center !important;
+	align-self: center !important;
+  }
+  .align-self-baseline {
+	-ms-flex-item-align: baseline !important;
+	align-self: baseline !important;
+  }
+  .align-self-stretch {
+	-ms-flex-item-align: stretch !important;
+	align-self: stretch !important;
+  }
+  .gap-0 {
+	gap: 0 !important;
+  }
+  .gap-1 {
+	gap: 0.25rem !important;
+  }
+  .gap-2 {
+	gap: 0.5rem !important;
+  }
+  .gap-3 {
+	gap: 0.75rem !important;
+  }
+  .gap-4 {
+	gap: 1rem !important;
+  }
+  .m-0 {
+	margin: 0 !important;
+  }
+  .mt-0, .my-0 {
+	margin-top: 0 !important;
+  }
+  .mr-0, .mx-0 {
+	margin-right: 0 !important;
+  }
+  .mb-0, .my-0 {
+	margin-bottom: 0 !important;
+  }
+  .ml-0, .mx-0 {
+	margin-left: 0 !important;
+  }
+  .m-1 {
+	margin: 0.25rem !important;
+  }
+  .mt-1, .my-1 {
+	margin-top: 0.25rem !important;
+  }
+  .mr-1, .mx-1 {
+	margin-right: 0.25rem !important;
+  }
+  .mb-1, .my-1 {
+	margin-bottom: 0.25rem !important;
+  }
+  .ml-1, .mx-1 {
+	margin-left: 0.25rem !important;
+  }
+  .m-2 {
+	margin: 0.5rem !important;
+  }
+  .mt-2, .my-2 {
+	margin-top: 0.5rem !important;
+  }
+  .mr-2, .mx-2 {
+	margin-right: 0.5rem !important;
+  }
+  .mb-2, .my-2 {
+	margin-bottom: 0.5rem !important;
+  }
+  .ml-2, .mx-2 {
+	margin-left: 0.5rem !important;
+  }
+  .m-3 {
+	margin: 1rem !important;
+  }
+  .mt-3, .my-3 {
+	margin-top: 1rem !important;
+  }
+  .mr-3, .mx-3 {
+	margin-right: 1rem !important;
+  }
+  .mb-3, .my-3 {
+	margin-bottom: 1rem !important;
+  }
+  .ml-3, .mx-3 {
+	margin-left: 1rem !important;
+  }
+  .m-4 {
+	margin: 1.5rem !important;
+  }
+  .mt-4, .my-4 {
+	margin-top: 1.5rem !important;
+  }
+  .mr-4, .mx-4 {
+	margin-right: 1.5rem !important;
+  }
+  .mb-4, .my-4 {
+	margin-bottom: 1.5rem !important;
+  }
+  .ml-4, .mx-4 {
+	margin-left: 1.5rem !important;
+  }
+  .m-5 {
+	margin: 3rem !important;
+  }
+  .mt-5, .my-5 {
+	margin-top: 4rem !important;
+  }
+  .mr-5, .mx-5 {
+	margin-right: 3rem !important;
+  }
+  .mb-5, .my-5 {
+	margin-bottom: 3rem !important;
+  }
+  .ml-5, .mx-5 {
+	margin-left: 3rem !important;
+  }
+  .p-0 {
+	padding: 0 !important;
+  }
+  .pt-0, .py-0 {
+	padding-top: 0 !important;
+  }
+  .pr-0, .px-0 {
+	padding-right: 0 !important;
+  }
+  .pb-0, .py-0 {
+	padding-bottom: 0 !important;
+  }
+  .pl-0, .px-0 {
+	padding-left: 0 !important;
+  }
+  .p-1 {
+	padding: 0.25rem !important;
+  }
+  .pt-1, .py-1 {
+	padding-top: 0.25rem !important;
+  }
+  .pr-1, .px-1 {
+	padding-right: 0.25rem !important;
+  }
+  .pb-1, .py-1 {
+	padding-bottom: 0.25rem !important;
+  }
+  .pl-1, .px-1 {
+	padding-left: 0.25rem !important;
+  }
+  .p-2 {
+	padding: 0.5rem !important;
+  }
+  .pt-2, .py-2 {
+	padding-top: 0.5rem !important;
+  }
+  .pr-2, .px-2 {
+	padding-right: 0.5rem !important;
+  }
+  .pb-2, .py-2 {
+	padding-bottom: 0.5rem !important;
+  }
+  .pl-2, .px-2 {
+	padding-left: 0.5rem !important;
+  }
+  .p-3 {
+	padding: 1rem !important;
+  }
+  .pt-3, .py-3 {
+	padding-top: 1rem !important;
+  }
+  .pr-3, .px-3 {
+	padding-right: 1rem !important;
+  }
+  .pb-3, .py-3 {
+	padding-bottom: 1rem !important;
+  }
+  .pl-3, .px-3 {
+	padding-left: 1rem !important;
+  }
+  .p-4 {
+	padding: 1.5rem !important;
+  }
+  .pt-4, .py-4 {
+	padding-top: 1.5rem !important;
+  }
+  .pr-4, .px-4 {
+	padding-right: 1.5rem !important;
+  }
+  .pb-4, .py-4 {
+	padding-bottom: 1.5rem !important;
+  }
+  .pl-4, .px-4 {
+	padding-left: 1.5rem !important;
+  }
+  .p-5 {
+	padding: 3rem !important;
+  }
+  .pt-5, .py-5 {
+	padding-top: 3rem !important;
+  }
+  .pr-5, .px-5 {
+	padding-right: 3rem !important;
+  }
+  .pb-5, .py-5 {
+	padding-bottom: 3rem !important;
+  }
+  .pl-5, .px-5 {
+	padding-left: 3rem !important;
+  }
+  .m-n1 {
+	margin: -0.25rem !important;
+  }
+  .mt-n1, .my-n1 {
+	margin-top: -0.25rem !important;
+  }
+  .mr-n1, .mx-n1 {
+	margin-right: -0.25rem !important;
+  }
+  .mb-n1, .my-n1 {
+	margin-bottom: -0.25rem !important;
+  }
+  .ml-n1, .mx-n1 {
+	margin-left: -0.25rem !important;
+  }
+  .m-n2 {
+	margin: -0.5rem !important;
+  }
+  .mt-n2, .my-n2 {
+	margin-top: -0.5rem !important;
+  }
+  .mr-n2, .mx-n2 {
+	margin-right: -0.5rem !important;
+  }
+  .mb-n2, .my-n2 {
+	margin-bottom: -0.5rem !important;
+  }
+  .ml-n2, .mx-n2 {
+	margin-left: -0.5rem !important;
+  }
+  .m-n3 {
+	margin: -1rem !important;
+  }
+  .mt-n3, .my-n3 {
+	margin-top: -1rem !important;
+  }
+  .mr-n3, .mx-n3 {
+	margin-right: -1rem !important;
+  }
+  .mb-n3, .my-n3 {
+	margin-bottom: -1rem !important;
+  }
+  .ml-n3, .mx-n3 {
+	margin-left: -1rem !important;
+  }
+  .m-n4 {
+	margin: -1.5rem !important;
+  }
+  .mt-n4, .my-n4 {
+	margin-top: -1.5rem !important;
+  }
+  .mr-n4, .mx-n4 {
+	margin-right: -1.5rem !important;
+  }
+  .mb-n4, .my-n4 {
+	margin-bottom: -1.5rem !important;
+  }
+  .ml-n4, .mx-n4 {
+	margin-left: -1.5rem !important;
+  }
+  .m-n5 {
+	margin: -3rem !important;
+  }
+  .mt-n5, .my-n5 {
+	margin-top: -3rem !important;
+  }
+  .mr-n5, .mx-n5 {
+	margin-right: -3rem !important;
+  }
+  .mb-n5, .my-n5 {
+	margin-bottom: -3rem !important;
+  }
+  .ml-n5, .mx-n5 {
+	margin-left: -3rem !important;
+  }
+  .m-auto {
+	margin: auto !important;
+  }
+  .mt-auto, .my-auto {
+	margin-top: auto !important;
+  }
+  .mr-auto, .mx-auto {
+	margin-right: auto !important;
+  }
+  .mb-auto, .my-auto {
+	margin-bottom: auto !important;
+  }
+  .ml-auto, .mx-auto {
+	margin-left: auto !important;
+  }
+  
+
+  

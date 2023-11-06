@@ -1,0 +1,56 @@
+<script>
+    /**
+     * THIS IS THE IFRAME APPROACH. LEAVING HERE FOR REFERENCE.
+     */
+    // window.addEventListener('message', handleMessage, false);
+
+    // function handleMessage(e) {
+    //     if (!['https://www.dashclicks.com', 'https://dashclicks.com'].includes(e.origin)) return;
+    //     let { key, value, method } = e.data;
+    //     if (method == 'dc-login') {
+    //         localStorage.setItem(key, value); // Store data in iframe domain local storage
+    //         alert(localStorage.getItem(key));
+    //         e.source.postMessage('session-set', 'https://www.dashclicks.com/login');
+    //     }
+    // }
+
+    const url = window.location.search?.replace('?', '');
+    const arr = url.split('&');
+    const obj = {};
+    arr.forEach(a => {
+        const [key, value] = a.split('=');
+        obj[key] = value;
+    });
+
+    fetch(`https://api.mydashmetrics.com/v1/auth/sso?d=${obj.token}`)
+        .then(async r => {
+            try {
+                let response = await r.json();
+                if (!response.success) {
+                    throw new Error(response.message);
+                }
+                const allSessions = JSON.parse(localStorage.getItem('auth-user') || '{}');
+
+                const sessionId = response.data.session_id;
+                localStorage.setItem(
+                    'auth-user',
+                    JSON.stringify({
+                        ...(allSessions || {}),
+                        [sessionId]: { auth: { ...(response.data || {}), authenticated: true } },
+                    }),
+                );
+                sessionStorage.setItem('active-session', sessionId);
+                window.history.pushState({}, null, '/dashboard');
+                window.location.reload();
+            } catch (err) {
+                // window.location.href = ;
+                window.history.pushState({}, null, `/auth/login?error=${err.message}`);
+                window.location.reload();
+            }
+        })
+        .catch(err => {
+            window.history.pushState({}, null, '/auth/login?error=Ran into a problem logging in.');
+            window.location.reload();
+        });
+</script>
+
